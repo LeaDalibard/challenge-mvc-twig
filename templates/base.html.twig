@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('style.css') }}">{% endblock %}
+</head>
+
+<body>
+<div class="sidenav">
+
+    <a href="{{ path('homepage') }}">Homepage</a>
+    <a href="{{ path('aboutMe') }}">About Becode</a>
+
+</div>
+<div class="main">
+    {% block body %}{% endblock %}
+</div>
+
+{% block javascripts %}{% endblock %}
+</body>
 </html>

@@ -1,3 +1,5 @@
+{% extends 'base.html.twig' %}
+{% block body %}
 <h1>Hello {{ name }}!</h1>
 
 <form action="{{ path('change-my-name') }}" method="post">
@@ -12,3 +14,4 @@
 
 
 <a href="{{ path('aboutMe') }}">About me</a>
+{% endblock %}
